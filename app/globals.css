@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.perspective {
+  perspective: 1000px;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.custom-zoom-in {
+  animation: zoom-in 0.5s forwards;
+}
+
+.custom-zoom-out {
+  animation: zoom-out 0.5s forwards;
+}
+
+.card {
+  width: 24rem;
+  height: 25rem; 
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.card-front {
+  background-color: hwb(204 5% 60% / 0.98);
+  color: white;
+}
+
+.card-back {
+  background-color: #bdc8fa;
+  color: #0c0c1d;
+  transform: rotateY(180deg);
+}
+
+/* Hover effect for large screens */
+@media (min-width: 1025px) {
+  .perspective:hover .card {
+    transform: rotateY(180deg);
+  }
+}
+
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
+  .card {
+    width: 22rem;
+    height: 26rem;
+  }
+}
+
+/* Small screens (e.g., mobile devices) */
+@media (max-width: 640px) {
+  .card {
+    width: 20rem;
+    height: 24rem;
+  }
+}
+
