@@ -39,13 +39,13 @@ const Contact = () => {
     if (result.success) {
       setStatus({ success: true, message: 'Message sent successfully' });
     } else {
-      setStatus({ success: false, message: 'Something went wrong.' });
+      setStatus({ success: false, message: 'Message failed to send.' });
     }
     
-    // Clear status message after 5 seconds
+    // Clear status message after 6 seconds
     setTimeout(() => {
       setStatus({});
-    }, 5000);
+    }, 6000);
   };
 
   return (
@@ -56,7 +56,7 @@ const Contact = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2">
               <h2 className="text-3xl flex justify-center items-center text-white font-bold mt-5 mb-4">Get In Touch</h2>
-              <p className="text-gray-600 mb-4">We can connect as my inbox is always open. Feel free to ask questions or you can simply say Hi,
+              <p className="text-gray-500 mb-4">We can connect as my inbox is always open. Feel free to ask questions or you can simply say Hi,
                 I will get back to you shortly!</p>
 
               <TrackVisibility>
@@ -75,9 +75,7 @@ const Contact = () => {
             </div>
 
             <div className="md:w-1/2">
-              <TrackVisibility>
-                {({ isVisible }) => (
-                  <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <div>
                     <form onSubmit={handleSubmit} className="w-full">
                       <div className="flex flex-wrap  mt-6">
                         <div className="w-full md:w-1/2 px-2 mb-4">
@@ -105,8 +103,6 @@ const Contact = () => {
                       }
                     </form>
                   </div>
-                )}
-              </TrackVisibility>
             </div>
           </div>
         </div>

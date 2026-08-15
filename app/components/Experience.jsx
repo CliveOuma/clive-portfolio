@@ -44,6 +44,25 @@ const experiences = [
       },
     ],
   },
+  {
+    id: 3,
+    title: "Workflow Support Engineer",
+    company: "Patika Technology LTD(Sanifu AI)",
+    startDate: "March/2026",
+    endDate: "Present",
+    details: [
+      {
+        id: 1,
+        detail:
+          "Workflow Support & Issue Resolution – Receive and triage workflow issues, investigate failures or inaccuracies, diagnose root causes, and apply fixes such as logic updates and data corrections."        
+      },
+      {
+        id: 2,
+        detail:
+          "Testing and Validation – Run regression tests after applying workflow fixes and test changes in staging environment to ensure the changes resolve the issue."
+      },
+    ],
+  },
 ];
 
 const Each = ({ experience }) => {
@@ -115,7 +134,7 @@ const Experience = () => {
         >
           Click Each card to view Job Details
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {experiences.map((item) => (
             <Each experience={item} key={item.id} />
           ))}

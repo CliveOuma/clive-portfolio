@@ -58,7 +58,7 @@ const About = () => {
           </p>
 
           <ul className="list-disc list-inside mt-2 text-gray-300">
-            <li>Frontend Technologies: HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Angular, Tailwind CSS</li>
+            <li>Frontend Technologies: HTML, CSS, JavaScript, TypeScript, React.js, Next.js,Tailwind CSS</li>
           </ul>
 
           <p className="text-gray-300 mt-4">
@@ -70,16 +70,15 @@ const About = () => {
           </p>
 
           <ul className="list-disc list-inside mt-2 text-gray-300">
-            <li>Backend Technologies: Node.js, Express.js, Java with Spring Boot, C# with .NET Framework</li>
+            <li>Backend Technologies: JavaScript, Node.js, Express.js, Nest.js, Python, Django, FastAPI, PHP, Laravel</li>
             <li>Databases: MySQL, PostgreSQL, MongoDB</li>
           </ul>
 
           <p className="text-gray-300 mt-4">
-            I'm also actively exploring Python for Data Analysis and advanced backend development, aiming to deepen my problem-solving capabilities and work with more complex systems.
-          </p>
-
-          <p className="text-gray-300 mt-4">
-            One of my greatest passions lies in the fields of Generative AI and Machine Learning. I'm constantly learning how to apply cutting-edge AI technologies to solve real-world problems and build intelligent, data-driven solutions that create meaningful impact.
+           One of my greatest passions lies in Generative AI, Machine Learning, and 
+           Automation. I'm constantly learning how to apply cutting-edge AI 
+           technologies and intelligent automation to solve real-world problems, 
+           streamline processes, and build data-driven solutions that create meaningful impact.
           </p>
 
           <div className="flex flex-row justify-start mt-8">
